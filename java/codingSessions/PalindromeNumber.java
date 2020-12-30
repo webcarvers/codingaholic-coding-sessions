@@ -9,13 +9,13 @@
  * Input: 12345
  * Output: Not Palindrome
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Mayank Tripathi
+ * @version 30/12/2020
  */
 
 import java.util.Scanner;
 
-class Palindrome {
+class PalindromeNumber {
     
     int input() {
         Scanner sc = new Scanner(System.in);
@@ -41,7 +41,7 @@ class Palindrome {
     }
     
     boolean checkPalindrome(int n) {
-        Palindrome ob = new Palindrome();
+        PalindromeNumber ob = new PalindromeNumber();
         
         int rev = ob.reverseNumber( n );
         
@@ -64,7 +64,7 @@ class Palindrome {
     
     public static void main(String args[]) {
         
-        Palindrome ob = new Palindrome();
+        PalindromeNumber ob = new PalindromeNumber();
         
         int n = ob.input();
         boolean isPalindrome = ob.checkPalindrome(n);
