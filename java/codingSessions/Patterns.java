@@ -162,6 +162,84 @@ class Patterns {
         }
     }
     
+    /**
+     * 1
+     * 2    3
+     * 4    5   6
+     * 7    8   9   10
+     * 
+     * 1
+     * 1    2
+     * 1    2   3
+     * 1    2   3   4
+     */
+    void pattern09() {
+        int a = 1;
+        
+        for (int i = 1; i <= 4; i += 1) {
+            for (int j = 1; j <= i; j += 1) {
+                System.out.print(a + "\t");
+                a += 1;
+            }
+            
+            System.out.println();
+        }
+    }
+    
+    /**
+     *                  #
+     *              #   #
+     *          #   #   #
+     *      #   #   #   #
+     * #    #   #   #   #
+     * 
+     *                  1
+     *              1   2
+     *          1   2   3
+     *      1   2   3   4
+     * 1    2   3   4   5
+     */
+    void pattern10() {
+        for (int i = 1; i <= 5; i += 1) {
+            
+            for (int k = 5; k > i; k -= 1) {
+                System.out.print("\t");
+            }
+            
+            for (int j = 1; j <= i; j += 1) {
+                System.out.print("#" + "\t");
+            }
+            
+            System.out.println();
+        }
+    }
+    
+    /**
+     *                  1
+     *              1   2   1
+     *          1   2   3   2   1
+     *      1   2   3   4   3   2   1
+     * 1    2   3   4   5   4   3   2   1
+     */
+    void pattern11() {
+        for(int i = 1; i <= 5; i += 1) {
+            
+            for (int k = 5; k > i; k -= 1) {
+                System.out.print("\t");
+            }
+            
+            for (int j = 1; j <= i; j += 1) {
+                System.out.print(j + "\t");
+            }
+            
+            for (int j1 = i - 1; j1 >= 1; j1 -= 1) {
+                System.out.print(j1 + "\t");
+            }
+            
+            System.out.println();
+        }
+    }
+    
     public static void main(String args[]) {
         
         Patterns ob = new Patterns();
@@ -173,7 +251,10 @@ class Patterns {
         // ob.pattern05();
         // ob.pattern06();
         // ob.pattern07();
-        ob.pattern08();
+        // ob.pattern08();
+        // ob.pattern09();
+        // ob.pattern10();
+        ob.pattern11();
     }
     
 }
